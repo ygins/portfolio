@@ -1,4 +1,6 @@
 ---
+import Link from "./Link.astro";
+
 interface Props {
   label: string;
   ionIconName: string;
@@ -8,29 +10,16 @@ interface Props {
 const { ionIconName, href, label } = Astro.props;
 ---
 
-<a class="profile-link" href={href}>
+<Link href={href}>
   <ion-icon
     class="profile-link-icon"
     name={ionIconName}
     aria-label=`Link to ${label}`></ion-icon>
-</a>
+</Link>
 
 <style>
   .profile-link-icon {
     height: 6.2rem;
     width: 6.2rem;
-  }
-
-  .profile-link:visited,
-  .profile-link:link {
-    color: var(--primary-color);
-    transition: all 0.3s;
-    border-bottom: 2px solid white;
-  }
-
-  .profile-link:active,
-  .profile-link:hover {
-    color: var(--darker-color);
-    border-bottom: 2px solid var(--accent-color);
   }
 </style>

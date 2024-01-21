@@ -8,7 +8,9 @@ import Card from "../components/Card.astro";
 <Section sectionTitle="Experience">
   <div class="experience-container">
     <Card>
-      <Philips slot="icon" />
+      <div class="philips-icon" slot="icon">
+        <Philips />
+      </div>
       <h3 slot="card-heading">Philips</h3>
       <h4 slot="card-subheading">Independant Software Consultant</h4>
       <p slot="card-subsubheading">Highland Heights, OH &deg; July 2019</p>
@@ -36,5 +38,9 @@ import Card from "../components/Card.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
+  }
+  .philips-icon {
+    width: 100%;
+    transform: translateY(-1.7rem);
   }
 </style>

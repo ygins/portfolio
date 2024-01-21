@@ -25,10 +25,12 @@ const { ionIconName, href, label } = Astro.props;
   .profile-link:link {
     color: var(--primary-color);
     transition: all 0.3s;
+    border-bottom: 2px solid white;
   }
 
   .profile-link:active,
   .profile-link:hover {
     color: var(--darker-color);
+    border-bottom: 2px solid var(--accent-color);
   }
 </style>

@@ -1,0 +1,34 @@
+---
+interface Props {
+  label: string;
+  ionIconName: string;
+  href: string;
+}
+
+const { ionIconName, href, label } = Astro.props;
+---
+
+<a class="profile-link" href={href}>
+  <ion-icon
+    class="profile-link-icon"
+    name={ionIconName}
+    aria-label=`Link to ${label}`></ion-icon>
+</a>
+
+<style>
+  .profile-link-icon {
+    height: 6.2rem;
+    width: 6.2rem;
+  }
+
+  .profile-link:visited,
+  .profile-link:link {
+    color: var(--primary-color);
+    transition: all 0.3s;
+  }
+
+  .profile-link:active,
+  .profile-link:hover {
+    color: var(--darker-color);
+  }
+</style>

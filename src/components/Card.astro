@@ -1,0 +1,36 @@
+<article class="card">
+  <div class="icon"><slot name="icon" /></div>
+  <div class:list={"card-heading"}>
+    <slot name="card-heading" />
+    <slot name="card-subheading" />
+    <slot name="card-subsubheading" />
+  </div>
+  <div class="card-content">
+    <slot name="card-content" />
+  </div>
+</article>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    grid-template-rows: 25fr auto;
+    border: 2px solid var(--primaryColor);
+    height: auto;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+  }
+  .card-heading {
+    grid-column: 2/3;
+    padding: 1.2rem;
+  }
+  .card-content {
+    grid-column: 1 / -1;
+    padding: 1.2rem;
+  }
+</style>

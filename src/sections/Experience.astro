@@ -1,12 +1,40 @@
 ---
 import Section from "../layouts/Section.astro";
+import Philips from "../icons/Philips.astro";
+import Minecraft from "../icons/Minecraft.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Section sectionTitle="Experience">
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ratione
-    fugiat maiores perspiciatis doloremque quod saepe libero soluta quasi aut
-    sit quidem velit cumque, fugit minus debitis repellendus. Ducimus,
-    perspiciatis.
-  </p>
+  <div class="experience-container">
+    <Card>
+      <Philips slot="icon" />
+      <h3 slot="card-heading">Philips</h3>
+      <h4 slot="card-subheading">Independant Software Consultant</h4>
+      <p slot="card-subsubheading">Highland Heights, OH &deg; July 2019</p>
+      <p slot="card-content">
+        I revamped their Perl license server to support packages of licenses,
+        and developed instructions for a python module then used by employees.
+      </p>
+    </Card>
+    <Card>
+      <Minecraft slot="icon" />
+      <h3 slot="card-heading">KarismicMC</h3>
+      <h4 slot="card-subheading">Independant Software Consultant</h4>
+      <p slot="card-subsubheading">Remote &deg; July 2019</p>
+      <p slot="card-content">
+        I authored a plugin using the Minecraft Spigot API which implemented a
+        fully customizable masks feature into the game, where each mask gave
+        customizable effects.
+      </p>
+    </Card>
+  </div>
 </Section>
+
+<style>
+  .experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+</style>

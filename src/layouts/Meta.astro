@@ -1,5 +1,6 @@
 ---
-
+import Palette from "../Palette";
+const palette = Palette;
 ---
 
 <!doctype html>
@@ -21,15 +22,17 @@
   </body>
 </html>
 
-<style is:global>
+<style
+  is:global
+  define:vars={{
+    primaryColor: palette.primaryColor,
+    darkerColor: palette.darkerColor,
+    accentColor: palette.accentColor,
+    fontWeightNormal: palette.fontWeightNormal,
+    fontWeightStrong: palette.fontWeightStrong,
+  }}
+>
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-  :root {
-    --primary-color: #071c2e;
-    --darker-color: #030e17;
-    --accent-color: #228be6;
-    --font-weight-normal: 500;
-    --font-weight-strong: 700;
-  }
   * {
     padding: 0;
     margin: 0;
@@ -42,13 +45,13 @@
   body {
     font-family: "Inter", sans-serif;
     line-height: 1;
-    font-weight: var(--font-weight-normal);
-    color: var(--primary-color);
+    font-weight: var(--fontWeightNormal);
+    color: var(--primaryColor);
     /*background-color: #e9f3fd;*/
   }
   h1 {
     font-size: 5.2rem;
-    font-weight: var(--font-weight-strong);
+    font-weight: var(--fontWeightStrong);
   }
   h2 {
     font-size: 3.6rem;

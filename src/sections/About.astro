@@ -1,13 +1,18 @@
 ---
+import Link from "../components/Link.astro";
 import Section from "../layouts/Section.astro";
 ---
 
 <Section sectionTitle="About Me">
   <p>
-    👋 Hi there! I am Yonatan Ginsburg, a junior at Yeshiva University working
-    towards a B.S. degree in Computer Science, with a focus in Distributed
-    Systems. I want to use my skills to create things that help people. I am
-    mostly interested in the backend, but frontend development also interests
-    me. Hobbies include the piano & melodica.
+    👋 Hi there! I am Yonatan Ginsburg, a junior at <Link
+      href="https://www.yu.edu"
+      nonHoverUnderline
+    >
+      Yeshiva University
+    </Link> working towards a B.S. degree in Computer Science, with a focus in Distributed
+    Systems. I want to use my skills to create things that help people. I am mostly
+    interested in the backend, but frontend development also interests me. Hobbies
+    include the piano & melodica.
   </p>
 </Section>

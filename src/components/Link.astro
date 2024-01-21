@@ -1,23 +1,28 @@
 ---
 interface Props {
   href: string;
+  nonHoverUnderline?: boolean;
 }
-const { href } = Astro.props;
+const { href, nonHoverUnderline = false } = Astro.props;
 ---
 
 <a href={href}><slot /></a>
 
-<style>
+<style define:vars={{ nonHoverColor: nonHoverUnderline ? "blue" : "white" }}>
+  a {
+    text-decoration: none;
+  }
+
   a:visited,
   a:link {
-    color: var(--primary-color);
+    color: var(--primaryColor);
     transition: all 0.3s;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--nonHoverColor);
   }
 
   a:active,
   a:hover {
     color: var(--darker-color);
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accentColor);
   }
 </style>

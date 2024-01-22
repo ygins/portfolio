@@ -1,8 +1,6 @@
 ---
 import Card from "../components/Card.astro";
-import IonIconLink from "../components/IonIconLink.astro";
 import ProjectExternalLinks from "../components/ProjectExternalLinks.astro";
-import Python from "../icons/Python.astro";
 import Section from "../layouts/Section.astro";
 ---
 
@@ -46,23 +44,74 @@ import Section from "../layouts/Section.astro";
       <div class="java-icon" slot="icon">
         <img src="java-svgrepo-com.svg" />
       </div>
+      <h3 slot="card-heading">Data Structures Search Engine</h3>
+      <p slot="card-subheading"><em>An In-Memory Search Engine</em></p>
+      <p slot="card-subsubheading">January - May 2023</p>
+      <div slot="card-content">
+        <p>
+          Over the course of the semester, I implemented various data structures
+          such as a B-Tree, Heap and Hashtable to create a search engine that
+          manages documents both in-memory and on disk. I utilized important OOP
+          principles such as abstraction & polymorphism.
+        </p>
+        <ProjectExternalLinks
+          links={[
+            {
+              label: "GitHub",
+              href: "https://github.com/ygins/DataStructures-search-engine",
+              ionIconName: "logo-github",
+            },
+          ]}
+        />
+      </div>
+    </Card>
+    <Card>
+      <div class="react-icon" slot="icon">
+        <ion-icon name="logo-react"></ion-icon>
+      </div>
+      <h3 slot="card-heading">Drum Machine</h3>
+      <p slot="card-subheading">
+        <em>A Customizable & Responsive Drum Machine</em>
+      </p>
+      <p slot="card-subsubheading">August - November 2019</p>
+      <div slot="card-content">
+        <p>
+          I built a React Drum Machine, using the framework to allow for
+          customization of sounds, BPM and number of tracks.
+        </p>
+        <ProjectExternalLinks
+          links={[
+            {
+              label: "GitHub",
+              href: "https://github.com/ygins/drum-machine",
+              ionIconName: "logo-github",
+            },
+          ]}
+        />
+      </div>
     </Card>
   </div>
-</Section>
 
-<style>
-  .projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .python-icon {
-    transform: translateY(1rem);
-  }
-  .java-icon {
-  }
-</style>
+  <style>
+    .projects-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    img,
+    ion-icon {
+      width: 100%;
+      height: 100%;
+    }
+    .python-icon {
+      transform: translateY(1rem);
+    }
+    .react-icon {
+      height: 100%;
+      width: 100%;
+    }
+    h3 {
+      margin: auto auto;
+    }
+  </style>
+</Section>

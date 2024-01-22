@@ -14,7 +14,7 @@
   .card {
     display: grid;
     grid-template-columns: 25fr 75fr;
-    grid-template-rows: 25fr auto;
+    grid-template-rows: 25fr 75fr;
     border: 2px solid var(--primaryColor);
     height: auto;
     transition: 0.5s all;
@@ -26,8 +26,8 @@
 
   .icon {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     grid-column: 1 / 2;
   }
   .card-heading {

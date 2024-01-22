@@ -1,11 +1,38 @@
 ---
+import Card from "../components/Card.astro";
 import Section from "../layouts/Section.astro";
 ---
 
 <Section sectionTitle="Projects">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a error
-    alias delectus vitae quas harum numquam animi, assumenda excepturi. Et
-    voluptatibus odio explicabo dignissimos tempora quod iure voluptate maxime?
-  </p>
+  <div class="projects-container">
+    <Card>
+      <ion-icon name="logo-python" slot="icon" class="ion-icon"></ion-icon>
+      <h3 slot="card-heading">key-switcheroo</h3>
+      <p slot="card-subheading">
+        <em>SSH Key Automation for Fleets of Machines</em>
+      </p>
+      <p slot="card-subsubheading">June - August 2023</p>
+      <p slot="card-content">
+        Lead by a team lead at Meta, I worked alongside five of my peers to
+        implement an SSH Key Rotation system which stores keys in the cloud. I
+        was part of the Software Development team, and focused on writing
+        modular code, architechture and design through code reviews. I used
+        PyTest for unit, integration and E2E tests. Through collaboration with
+        my teammates, I gained exposure to Terraform and Jenkins.
+      </p>
+    </Card>
+  </div>
 </Section>
+
+<style>
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .ion-icon {
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -3,14 +3,18 @@ import Link from "./Link.astro";
 
 interface Props {
   label: string;
+  ionIconName: string;
   href: string;
 }
 
-const { href, label } = Astro.props;
+const { ionIconName, href, label } = Astro.props;
 ---
 
 <Link href={href}>
-  <div class="profile-link-icon" aria-label=`Link to ${label}`><slot /></div>
+  <ion-icon
+    class="profile-link-icon"
+    name={ionIconName}
+    aria-label=`Link to ${label}`></ion-icon>
 </Link>
 
 <style>

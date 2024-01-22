@@ -1,5 +1,5 @@
 ---
-import IconLink from "../components/IconLink.astro";
+import IonIconLink from "../components/IonIconLink.astro";
 import Section from "../layouts/Section.astro";
 ---
 
@@ -8,13 +8,12 @@ import Section from "../layouts/Section.astro";
     <h2 class="i-am">I am <strong>Yonatan Ginsburg</strong>.</h2>
     <h3 class="i-enjoy">I enjoy making useful things.</h3>
     <aside class="links">
-      <IconLink
-        class:list={"profile-link"}
-        ionIconName="logo-github"
-        label="GitHub"
-        href="#"
-      />
-      <IconLink ionIconName="logo-linkedin" label="LinkedIn" href="#" />
+      <div class="profile-link-icon">
+        <IonIconLink ionIconName="logo-github" label="GitHub" href="#" />
+      </div>
+      <div class="profile-link-icon">
+        <IonIconLink ionIconName="logo-linkedin" label="LinkedIn" href="#" />
+      </div>
     </aside>
   </header>
 </Section>
@@ -38,5 +37,9 @@ import Section from "../layouts/Section.astro";
     margin-top: 2.4rem;
     display: flex;
     gap: 1.2rem;
+  }
+  .profile-link-icon {
+    height: 6.2rem;
+    width: 6.2rem;
   }
 </style>

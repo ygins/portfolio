@@ -9,7 +9,7 @@ import Card from "../components/Card.astro";
   <div class="experience-container">
     <Card>
       <div class="philips-icon" slot="icon">
-        <Philips />
+        <img src="philips-seeklogo.svg" />
       </div>
       <h3 slot="card-heading">Philips</h3>
       <h4 slot="card-subheading">Independant Software Consultant</h4>
@@ -20,7 +20,7 @@ import Card from "../components/Card.astro";
       </p>
     </Card>
     <Card>
-      <Minecraft slot="icon" />
+      <img src="minecraft-alt-svgrepo-com.svg" slot="icon" />
       <h3 slot="card-heading">KarismicMC</h3>
       <h4 slot="card-subheading">Independant Software Consultant</h4>
       <p slot="card-subsubheading">Remote | June - July 2019</p>
@@ -42,5 +42,8 @@ import Card from "../components/Card.astro";
   .philips-icon {
     width: 100%;
     transform: translateY(-1.7rem);
+  }
+  img {
+    width: 100%;
   }
 </style>

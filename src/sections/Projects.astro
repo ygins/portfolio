@@ -16,7 +16,7 @@ import Section from "../layouts/Section.astro";
       </p>
       <p slot="card-subsubheading">June - August 2023</p>
       <div slot="card-content">
-        <p>
+        <p class="card-text">
           Lead by a team lead at Meta, I worked alongside five of my peers to
           implement an SSH Key Rotation system which stores keys in the cloud. I
           was part of the Software Development team, and focused on writing
@@ -48,7 +48,7 @@ import Section from "../layouts/Section.astro";
       <p slot="card-subheading"><em>An In-Memory Search Engine</em></p>
       <p slot="card-subsubheading">January - May 2023</p>
       <div slot="card-content">
-        <p>
+        <p class="card-text">
           Over the course of the semester, I implemented various data structures
           such as a B-Tree, Heap and Hashtable to create a search engine that
           manages documents both in-memory and on disk. I utilized important OOP
@@ -75,7 +75,7 @@ import Section from "../layouts/Section.astro";
       </p>
       <p slot="card-subsubheading">August - November 2019</p>
       <div slot="card-content">
-        <p>
+        <p class="card-text">
           I built a React Drum Machine, using the framework to allow for
           customization of sounds, BPM and number of tracks.
         </p>
@@ -90,28 +90,61 @@ import Section from "../layouts/Section.astro";
         />
       </div>
     </Card>
+    <Card>
+      <div class="minecraft-icon" slot="icon">
+        <img src="minecraft-alt-svgrepo-com.svg" />
+      </div>
+      <h3 slot="card-heading">MultiblockAPI</h3>
+      <p slot="card-subheading">
+        <em>Creating Multiblock Structures</em>
+      </p>
+      <p slot="card-subsubheading">August - November 2019</p>
+      <div slot="card-content">
+        <p class="card-text">
+          I used Minecraft's Spigot API to build a Java plugin to allow the
+          creation of multiblock structures. The plugin implemented persistent
+          file storage to store multiblock data.
+        </p>
+        <ProjectExternalLinks
+          links={[
+            {
+              label: "GitHub",
+              href: "https://github.com/ygins/multiblockapi",
+              ionIconName: "logo-github",
+            },
+          ]}
+        />
+      </div>
+    </Card>
   </div>
-
-  <style>
-    .projects-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-    }
-    img,
-    ion-icon {
-      width: 100%;
-      height: 100%;
-    }
-    .python-icon {
-      transform: translateY(1rem);
-    }
-    .react-icon {
-      height: 100%;
-      width: 100%;
-    }
-    h3 {
-      margin: auto auto;
-    }
-  </style>
 </Section>
+
+<style>
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  img,
+  ion-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+  }
+
+  .python-icon {
+    transform: translateY(1rem);
+  }
+
+  .react-icon {
+    height: 100%;
+    width: 100%;
+  }
+  h3 {
+    margin: auto auto;
+  }
+</style>

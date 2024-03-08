@@ -1,5 +1,4 @@
 <article class="card">
-  <div class="icon"><slot name="icon" /></div>
   <div class:list={"card-heading"}>
     <slot name="card-heading" />
     <slot name="card-subheading" />
@@ -13,9 +12,9 @@
 <style>
   .card {
     display: grid;
-    grid-template-columns: 25fr 75fr;
-    grid-template-rows: 10fr 90fr;
-    height: 35rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15fr 85fr;
+    height: 30rem;
     border: 2px solid var(--primaryColor);
     transition: 0.5s all;
   }
@@ -28,14 +27,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-column: 1 / 2;
   }
   .card-heading {
-    grid-column: 2/3;
     padding: 1.2rem;
   }
   .card-content {
-    grid-column: 1 / -1;
     padding: 1.2rem;
   }
 </style>

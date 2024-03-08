@@ -1,6 +1,11 @@
 <article class="card">
   <div class:list={"card-heading"}>
-    <slot name="card-heading" />
+    <div class="card-heading-top">
+      <slot name="card-heading" />
+      <div class="external-link-icons">
+        <slot name="external-link-icons" />
+      </div>
+    </div>
     <slot name="card-subheading" />
     <slot name="card-subsubheading" />
   </div>
@@ -11,10 +16,7 @@
 
 <style>
   .card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15fr 85fr;
-    height: 30rem;
+    max-height: 40rem;
     border: 2px solid var(--primaryColor);
     transition: 0.5s all;
   }
@@ -31,7 +33,13 @@
   .card-heading {
     padding: 1.2rem;
   }
+  .card-heading-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .card-content {
     padding: 1.2rem;
+    max-height: 15rem;
   }
 </style>

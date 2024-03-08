@@ -8,6 +8,21 @@ import Section from "../layouts/Section.astro";
   <div class="projects-container">
     <Card>
       <h3 slot="card-heading">key-switcheroo</h3>
+      <ProjectExternalLinks
+        slot="external-link-icons"
+        links={[
+          {
+            label: "GitHub",
+            href: "https://github.com/SSH-key-rotation-AWS/key-switcheroo",
+            ionIconName: "logo-github",
+          },
+          {
+            label: "PyPi",
+            href: "https://pypi.org/project/key-switcheroo/",
+            ionIconName: "logo-python",
+          },
+        ]}
+      />
       <p slot="card-subheading">
         <em>SSH Key Automation for Fleets of Machines</em>
       </p>
@@ -21,24 +36,20 @@ import Section from "../layouts/Section.astro";
           PyTest for unit, integration and E2E tests. Through collaboration with
           my teammates, I gained exposure to Terraform and Jenkins.
         </p>
-        <ProjectExternalLinks
-          links={[
-            {
-              label: "GitHub",
-              href: "https://github.com/SSH-key-rotation-AWS/key-switcheroo",
-              ionIconName: "logo-github",
-            },
-            {
-              label: "PyPi",
-              href: "https://pypi.org/project/key-switcheroo/",
-              ionIconName: "logo-python",
-            },
-          ]}
-        />
       </div>
     </Card>
     <Card>
       <h3 slot="card-heading">Data Structures Search Engine</h3>
+      <ProjectExternalLinks
+        slot="external-link-icons"
+        links={[
+          {
+            label: "GitHub",
+            href: "https://github.com/ygins/DataStructures-search-engine",
+            ionIconName: "logo-github",
+          },
+        ]}
+      />
       <p slot="card-subheading"><em>An In-Memory Search Engine</em></p>
       <p slot="card-subsubheading">January - May 2023</p>
       <div slot="card-content">
@@ -48,19 +59,20 @@ import Section from "../layouts/Section.astro";
           manages documents both in-memory and on disk. I utilized important OOP
           principles such as abstraction & polymorphism.
         </p>
-        <ProjectExternalLinks
-          links={[
-            {
-              label: "GitHub",
-              href: "https://github.com/ygins/DataStructures-search-engine",
-              ionIconName: "logo-github",
-            },
-          ]}
-        />
       </div>
     </Card>
     <Card>
       <h3 slot="card-heading">Drum Machine</h3>
+      <ProjectExternalLinks
+        slot="external-link-icons"
+        links={[
+          {
+            label: "GitHub",
+            href: "https://github.com/ygins/drum-machine",
+            ionIconName: "logo-github",
+          },
+        ]}
+      />
       <p slot="card-subheading">
         <em>A Customizable & Responsive Drum Machine</em>
       </p>
@@ -70,19 +82,20 @@ import Section from "../layouts/Section.astro";
           I built a React Drum Machine, using the framework to allow for
           customization of sounds, BPM and number of tracks.
         </p>
-        <ProjectExternalLinks
-          links={[
-            {
-              label: "GitHub",
-              href: "https://github.com/ygins/drum-machine",
-              ionIconName: "logo-github",
-            },
-          ]}
-        />
       </div>
     </Card>
     <Card>
       <h3 slot="card-heading">MultiblockAPI</h3>
+      <ProjectExternalLinks
+        slot="external-link-icons"
+        links={[
+          {
+            label: "GitHub",
+            href: "https://github.com/ygins/multiblockapi",
+            ionIconName: "logo-github",
+          },
+        ]}
+      />
       <p slot="card-subheading">
         <em>Creating Multiblock Structures</em>
       </p>
@@ -93,15 +106,6 @@ import Section from "../layouts/Section.astro";
           creation of multiblock structures. The plugin implemented persistent
           file storage to store multiblock data.
         </p>
-        <ProjectExternalLinks
-          links={[
-            {
-              label: "GitHub",
-              href: "https://github.com/ygins/multiblockapi",
-              ionIconName: "logo-github",
-            },
-          ]}
-        />
       </div>
     </Card>
   </div>
@@ -111,8 +115,5 @@ import Section from "../layouts/Section.astro";
   .projects-container {
     display: grid;
     gap: 1.2rem;
-  }
-  h3 {
-    margin: auto auto;
   }
 </style>
